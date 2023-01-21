@@ -11,7 +11,7 @@ export const CartContainer = styled.div `
   
    
    @media screen and (width: 320px) and (max-width: 480px){
-         height: 80vh;
+         height: 100%;
       } 
   
    
