@@ -44,7 +44,7 @@ export const CartContainer = styled.div `
          align-items: center;
          border: none;
          width: 500px;
-         border: 1px solid red;
+         
       }
 
       @media screen and (min-width: 320px) and (max-width: 480px){
