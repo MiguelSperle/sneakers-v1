@@ -104,8 +104,8 @@ margin-top: 140px;
     }
 
     @media screen and (min-width: 320px) and (max-width: 480px) {
-        left: 250px;
-        bottom: 340px;
+        left: 251px;
+        
     }
 }
 
