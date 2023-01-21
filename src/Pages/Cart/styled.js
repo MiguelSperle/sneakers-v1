@@ -10,7 +10,7 @@ export const CartContainer = styled.div `
    margin-top: 100px;
   
    
-   @media screen and (width: 320px) and (max-width: 480px){
+   @media screen and (min-width: 320px) and (max-width: 480px){
          height: 100%;
       } 
   
@@ -22,7 +22,7 @@ export const CartContainer = styled.div `
          padding: 40px 0 0 20px;
       }
 
-      @media screen and (width: 320px) and (max-width: 480px){
+      @media screen and (min-width: 320px) and (max-width: 480px){
         text-align: center;
       } 
    }
