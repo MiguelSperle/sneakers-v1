@@ -18,6 +18,10 @@ export const CartContainer = styled.div `
    h1 {
       margin-bottom: 25px;
 
+      @media screen and (min-width: 481px) and (max-width: 768px) {
+         padding: 40px 0 0 20px;
+      }
+
       @media screen and (width: 320px) and (max-width: 480px){
         text-align: center;
       } 
@@ -39,9 +43,11 @@ export const CartContainer = styled.div `
          flex-direction: column;
          align-items: center;
          border: none;
+         width: 500px;
+         border: 1px solid red;
       }
 
-      @media screen and (width: 320px) and (max-width: 480px){
+      @media screen and (min-width: 320px) and (max-width: 480px){
          display: flex;
          flex-direction: column;
          align-items: center;
@@ -91,7 +97,7 @@ export const CartContainer = styled.div `
          margin: 10px 90px 0 0;
       }
 
-      @media screen and (width: 320px) and (max-width: 480px){
+      @media screen and (min-width: 320px) and (max-width: 480px){
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -146,7 +152,7 @@ export const CartContainer = styled.div `
         margin: 0 0px 20px 0;
       }
 
-      @media screen and (width: 320px) and (max-width: 480px){
+      @media screen and (min-width: 320px) and (max-width: 480px){
           display: flex;
           flex-direction: column;
           align-items: center;

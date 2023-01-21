@@ -24,6 +24,9 @@ export const HeaderContainer = styled.div `
      align-items: center;
      gap: 80px;
 
+     @media screen and (min-width: 320px) and (max-width: 480px) {
+             display: none;
+        }
      
 
      .Title {
@@ -47,9 +50,7 @@ export const HeaderContainer = styled.div `
              display: none;
         }
 
-        @media screen and (min-width: 320px) and (max-width: 480px) {
-             display: none;
-        }
+        
      }
      
      .navBar li a {

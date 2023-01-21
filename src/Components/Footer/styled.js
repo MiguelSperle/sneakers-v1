@@ -12,7 +12,7 @@ export const FooterContainer = styled.footer `
     margin-top: 20px;
 
     @media screen and (min-width: 320px) and (max-width: 480px) {
-        width: 320px;
+        width: 100%;
     }
    
     .logo {
