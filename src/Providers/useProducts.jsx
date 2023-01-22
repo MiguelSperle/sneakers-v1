@@ -19,29 +19,29 @@ export const ProductsProvider = ({ children }) => {
     quantDeCompra,
     InStock
   }){ 
-      setProducts([...products, {id, name , price, image, quantDeCompra, InStock}])
-      
 
+    const verificationProduct = products.find((teste) => teste.id === id) // verificando se tem algum item que eu tentei adiocionar mais de uma vez no carrinho
+
+    if(verificationProduct){ //se tiver, vai retornar o alert, assim não adicionando mais nada desse id.
+      return alert('Ja foi adicionado ao carrinho')
+    }
+
+    setProducts([...products, {id, name , price, image, quantDeCompra, InStock}])
+    
   }
-
-  
 
   // função de adicionar mais de um item no carrinho (quantidade)
   function addCountShoes({
     id,
-   
-   
+
   }){   
     const itemExists = products.find((item) => item.id === id)
 
     const newItem = {
         ...itemExists,
-        quantDeCompra: itemExists.quantDeCompra + 1,
-        
-       
+        quantDeCompra: itemExists.quantDeCompra + 1,   
     }
 
-   
     if(itemExists.quantDeCompra >= itemExists.InStock){
       return alert('Ja foi adicionado todos que temos em estoque no seu carrinho')
     }
@@ -55,9 +55,7 @@ export const ProductsProvider = ({ children }) => {
           ...item
         }
       }
-       
       
-     
    }))
 
   }
@@ -70,9 +68,7 @@ export const ProductsProvider = ({ children }) => {
 
     const newItem ={
       ...itemExists,
-         quantDeCompra: itemExists.quantDeCompra - 1,
-        
-         
+         quantDeCompra: itemExists.quantDeCompra - 1,     
     }
 
     if(itemExists.quantDeCompra <= 1){
@@ -87,9 +83,7 @@ export const ProductsProvider = ({ children }) => {
           ...item
         }
       }
-       
       
-     
    }))
   }
 
