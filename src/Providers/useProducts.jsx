@@ -20,11 +20,7 @@ export const ProductsProvider = ({ children }) => {
     InStock
   }){ 
 
-    const verificationProduct = products.find((verificantionItem) => verificantionItem.id === id) // verificando se tem algum item que eu tentei adiocionar mais de uma vez no carrinho
-
-    if(verificationProduct){ //se tiver, vai retornar o alert, assim não adicionando mais nada desse id.
-      return alert('Ja foi adicionado ao carrinho')
-    }
+   
 
     setProducts([...products, {id, name , price, image, quantDeCompra, InStock}])
     
