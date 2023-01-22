@@ -7,6 +7,7 @@ import { useProducts } from '../../Providers/useProducts';
 import { useState } from 'react';
 import MobileMenu from '../MenuMobile/mobile'
 
+
 function Header() {
    const { products } = useProducts();
    const [openMenu, setOpenMenu] = useState(false)
@@ -20,8 +21,8 @@ function Header() {
         <div className='header-navegation'>
             <h1 className='Title'>sneakers</h1>
               <ul className='navBar'>
-                 <li><Link to="/">Home</Link></li>
-                 <li><Link to="/Produtos" >Produtos</Link></li>
+                 <li><Link to="/" onClick={() =>  window.scrollTo(0, 0)} >Home</Link></li>
+                 <li><Link to="/Produtos" onClick={() =>  window.scrollTo(0, 0)} >Produtos</Link></li>
                  <li><Link to="*ERRO">Sobre</Link></li>
              </ul>
         </div>

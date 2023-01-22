@@ -34,7 +34,7 @@ export default function App() {
         {products.map((product) => { // to dando um map no json
           return (
             <SwiperSlide key={product.id} >
-            <Link to={`/Produtos/${product.slug}`}><img className='img-cards' src={product.images[0].url} alt="" /></Link>
+            <Link to={`/Produtos/${product.slug}`} onClick={() =>  window.scrollTo(0, 0)} ><img className='img-cards' src={product.images[0].url} alt="" /></Link>
                 <div className='global-container-price'>
                   <div className='price-container'>
                      <p className='price-card'>

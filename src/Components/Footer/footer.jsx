@@ -1,7 +1,7 @@
 import { FooterContainer } from '../Footer/styled' ;
 import { Link } from 'react-router-dom';
 import { TopIcon } from '../Svgs/BackTop';
-import Header from '../../Components/Header/header'
+
 
 function Footer() {
   
@@ -17,7 +17,7 @@ function Footer() {
                <nav>
                   <ul>
                     <li>Navegação</li>
-                    <li><Link to='/'>Home</Link></li>
+                    <li><Link to='/' onClick={() =>  window.scrollTo(0, 0)} >Home</Link></li>
                     <li><Link to='*ERRO'>Produtos</Link></li>
                     <li><Link to='*ERRO'>Sobre</Link></li>
                   </ul>
@@ -25,7 +25,7 @@ function Footer() {
             </div>
 
             <div className='come-back-top'>
-            <TopIcon/>
+           <Link onClick={() =>  window.scrollTo(0, 0)} ><TopIcon/></Link>
              <p>Voltar pro topo</p>
             </div>
       </FooterContainer>
