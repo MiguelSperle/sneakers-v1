@@ -16,7 +16,7 @@ function Produto() {
   const [lookProdutos, setLookProtutos] = useState(products)
   
 
-  function teste(e){ // rever
+  function LookCategories(e){ // rever
      let optionSelected = e.target.options[e.target.selectedIndex].value // pega o value do option
       
      if(optionSelected === 'all'){ // se optionSelect === value (all) do option
@@ -56,7 +56,7 @@ function Produto() {
           </option>
         </select>
 
-        <select onChange={teste} name="estilo" id="estilo">
+        <select onChange={LookCategories} name="estilo" id="estilo">
            <option value="all">
                All
            </option>
