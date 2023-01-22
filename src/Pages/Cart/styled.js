@@ -8,6 +8,15 @@ export const CartContainer = styled.div `
    width: 100%;
    height: 70vh;
    margin-top: 100px;
+
+   @media screen and (min-width: 769px) and (max-width: 1024px){
+       height: 85vh;
+   }
+
+
+   @media screen and (min-width: 481px) and (max-width: 768px){
+       height: 100%;
+   }
   
    
    @media screen and (min-width: 320px) and (max-width: 480px){
@@ -35,7 +44,7 @@ export const CartContainer = styled.div `
       border-bottom: 1px solid gray;
 
       @media screen and (min-width: 769px) and (max-width: 1024px) {
-         padding-left: 100px;
+          width: 700px;
       }
 
       @media screen and (min-width: 481px) and (max-width: 768px) {
