@@ -20,6 +20,10 @@ export const ProductsProvider = ({ children }) => {
     InStock
   }){ 
 
+    const VerificationItem = products.find((verification) =>  verification.id === id)
+    if(VerificationItem){
+      return alert('Ja tem esse item no carrinho')
+    }
    
 
     setProducts([...products, {id, name , price, image, quantDeCompra, InStock}])
