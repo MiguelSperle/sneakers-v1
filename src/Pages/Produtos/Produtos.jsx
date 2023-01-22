@@ -6,15 +6,43 @@ import { Pagination } from "swiper";
 import  products  from '../../mock/products.json'
 import { Link } from 'react-router-dom';
 import { useProducts } from '../../Providers/useProducts';
+import { useState } from 'react';
 
 function Produto() {
 
   const { addProductCart } =  useProducts() 
 
+
+  const [lookProdutos, setLookProtutos] = useState(products)
+  
+
+  function teste(e){ // rever
+     let optionSelected = e.target.options[e.target.selectedIndex].value // pega o value do option
+      
+     if(optionSelected === 'all'){ // se optionSelect === value (all) do option
+      return setLookProtutos(products) // vai retornar todos os produtos
+     }
+
+     if (optionSelected ){
+      const filteredProducts = products.filter((product) => product.category === optionSelected) // filtrando as categorias
+       if (filteredProducts.length === 0) { // se não tiver tal categoria vai retornar todas
+          return setLookProtutos(products)
+        } else { // se n, retorna a categoria q tem no option
+          return setLookProtutos(filteredProducts)
+        }
+     
+     } else {
+      setLookProtutos(products)
+       
+     }
+      
+    
+  }
+
     return (
     <Container-Global className='animation-scroll-produtos'>
      <ContainerPageProducts>
-       <select name="category" id="category">
+       <select  name="category" id="category">
           <option value="categoria-1">
             Categoria-1
           </option>
@@ -28,12 +56,16 @@ function Produto() {
           </option>
         </select>
 
-        <select name="estilo" id="estilo">
-           <option value="Esporte">
+        <select onChange={teste} name="estilo" id="estilo">
+           <option value="all">
+               All
+           </option>
+
+           <option value="esporte">
               Esporte
            </option>
 
-            <option value="Casual">
+            <option value="casual">
                Casual
             </option>
         </select>
@@ -52,7 +84,7 @@ function Produto() {
         className="mySwiper"
       >
         
-         {products.map((product) => {
+         {lookProdutos.map((product) => {
            return (
           <SwiperSlide key={product.id}>
             <Link to={`/Produtos/${product.slug}`}> <img src={product.images[0].url} alt="" /></Link>
