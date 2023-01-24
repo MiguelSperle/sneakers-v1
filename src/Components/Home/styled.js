@@ -6,112 +6,66 @@ display: flex;
 justify-content: center;
 align-items: center;
 margin-top: 140px;
+padding: 10px;
 
 
-.container-slider {
-    border-radius: 15px;
-    width: 1200px;
-    height: 25rem;
 
-    @media screen  and (min-width: 1201px){
-        width: 1170px;
-    }
-    
-    @media screen  and (min-width: 1025px) and (max-width: 1200px){
-         width: 950px;
-    } 
+.swiper {
+  width: 1200px;
+  height: 600px;
 
 
-    @media screen and (min-width: 769px) and (max-width: 1024px) {
-        width: 700px;
-       
-    }
-
-      
-   @media screen and (min-width: 481px) and (max-width: 768px) {
-        width: 400px;
-         
-    }
-
-    @media screen and (min-width: 320px) and (max-width: 480px) {
-        width: 300px;
-        
-        
-    }
-
-    
-    
-}
-.container-slider img {
+  @media screen and (min-width: 769px) and (max-width: 1024px){
     width: 100%;
-    height: 100%;
-    border-radius: 15px;
-    object-fit: cover;
-    box-shadow: inset -1px 3px 8px 5px #1f87ff, 2px 5px 16px 0px #0b325e, 5px 5px 15px 5px rgb(0 0 0 / 0%);
-    
+    border-radius: 0.5rem;
+  }
+
+  @media screen and (min-width: 481px) and (max-width: 768px) {
+    width: 100%;
+    border-radius: 0.5rem;
+  }
+
+
+  @media screen and (min-width: 320px) and (max-width: 480px) {
+    width: 100%;
+    border-radius: 0.5rem;
+  }
 }
 
-.button-left-carrousel {
-    background: rgb(27, 27, 27);
-    color: white;
-    padding: 0.5rem;
-    border-radius: 50%;
-    position: relative;
-    bottom: 300px;
-    left: 20px;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
 
-    @media screen and (min-width: 320px) and (max-width: 480px) {
-        left:  10px;
-    }
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
 }
 
-.button-left-carrousel svg {
-    font-size: 18px;
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.button-right-carrousel {
-    background: rgb(27, 27, 27);
-    color: white;
-    padding: 0.5rem;
-    border-radius: 50%;
-    position: relative;
-    bottom: 342px;
-    left: 1140px;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
 
-    
-    @media screen  and (min-width: 1201px){
-        left: 1115px;
-    }
 
-    @media screen  and (min-width: 1025px) and (max-width: 1200px){
-         left: 895px;
-    } 
 
     
-    @media screen and (min-width: 769px) and (max-width: 1024px) {
-         left: 650px;
-    }
+ 
 
-    @media screen and (min-width: 48px) and (max-width: 768px) {
-        left: 345px;
 
-    }
-
-    @media screen and (min-width: 320px) and (max-width: 480px) {
-        left: 251px;
-        
-    }
-}
-
-.button-right-carrousel svg {
-    font-size: 18px;
-}
 
 `
 export const ContainerGridHome = styled.div `
@@ -121,6 +75,7 @@ export const ContainerGridHome = styled.div `
      margin-top: 120px;
      gap: 1.2rem;
      margin-bottom: 20px;
+ 
 
    
      @media screen and (min-width: 769px) and (max-width: 1024px) {
@@ -134,6 +89,7 @@ export const ContainerGridHome = styled.div `
         display: flex;
         flex-direction: column;
         align-items: center;
+         
     }
 
     @media screen and (min-width: 481px) and (max-width: 768px) {

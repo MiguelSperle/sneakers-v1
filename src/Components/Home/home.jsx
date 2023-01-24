@@ -1,12 +1,22 @@
-import { useState } from 'react'
+
 import { HomeContainer,ContainerGridHome  } from '../Home/styled'
 import { LeftSlider } from '../Svgs/Leftslider'
 import { RightSlider } from '../Svgs/RightSlider'
 import Section from '../../Components/Section/section'
 
+
+
+import React, { useRef, useState } from "react";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import { Navigation } from "swiper";
 function Home() {
 
-    const [open, setOpen] = useState(false)
+   
    
 
     
@@ -16,18 +26,10 @@ function Home() {
   return (
    <>
       <HomeContainer className='animation-scroll'>
-         <div className='container-slider'>
-           <img src={open ? 'img/slideR2.jpg' : 'img/slider1.jpg'} alt="" />
-
-           <button onClick={() => setOpen(!open)} className='button-left-carrousel'>
-               <LeftSlider/>
-            </button>
-
-            <button onClick={() => setOpen(!open)} className='button-right-carrousel'>
-               <RightSlider/>
-            </button>
-        
-          </div>
+        <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
+        <SwiperSlide><img src="/img/slider1.jpg" alt="" /></SwiperSlide>
+        <SwiperSlide><img src="/img/slideR2.jpg" alt="" /></SwiperSlide>
+        </Swiper>
        </HomeContainer>
 
         <ContainerGridHome className='animation-scroll-left'>
