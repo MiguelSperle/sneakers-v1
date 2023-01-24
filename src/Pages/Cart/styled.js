@@ -10,18 +10,20 @@ export const CartContainer = styled.div `
    margin-top: 100px;
 
    @media screen and (min-width: 769px) and (max-width: 1024px){
-       height: 85vh;
+       height: 100%;
+       min-height: 85vh;
    }
 
 
    @media screen and (min-width: 481px) and (max-width: 768px){
       height: 100%;
-
+      min-height: 85vh;
    }
   
    
    @media screen and (min-width: 320px) and (max-width: 480px){
          height: 100%;
+         min-height: 80vh;
       } 
   
    
