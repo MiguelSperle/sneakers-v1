@@ -24,7 +24,7 @@ export default function App() {
   return (
     
       <ContainerSection className='animation-scroll-bottom'>
-        <p>Clique na foto dos tenis abaixo para saber mais.</p>
+        <p>Clique na foto dos tênis abaixo para saber mais.</p>
       <Swiper
         effect={"cards"}
         grabCursor={true}
