@@ -1,7 +1,5 @@
 
 import { HomeContainer,ContainerGridHome  } from '../Home/styled'
-import { LeftSlider } from '../Svgs/Leftslider'
-import { RightSlider } from '../Svgs/RightSlider'
 import Section from '../../Components/Section/section'
 
 
