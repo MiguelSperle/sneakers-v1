@@ -9,7 +9,7 @@ In this project the products were stored in a .json file
 This project is more complete in the computer version.
 
 
-#Portuguese
+# Portuguese
 
 Esta é a primeira versão do site de calçados, meu primeiro projeto de E-commerce, onde pude aprimorar minhas habilidades e aprender novos métodos e
 melhorei minhas habilidades como Desenvolvedor Front-end.
