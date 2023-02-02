@@ -15,18 +15,14 @@ import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper";
 import { useProducts } from '../../Providers/useProducts';
 
-function Teste() {
+function BuyProduct() {
 
   const { slug } = useParams(); // verifica se existe algum parâmetros passado no path da url
   const productSelected = products.find((product) => product.slug === slug) // verificando se existi algum produto do json que é igual a rota da url
 
   const { addProductCart } = useProducts();
   return (
-      
-     
-          <ContainerItem >
-
-
+        <ContainerItem >
               <Swiper
                 pagination={{
                 type: "fraction",
@@ -35,8 +31,18 @@ function Teste() {
                 modules={[Pagination, Navigation]}
                 className="mySwiper"
           >
-         
-          {/* {productSelected.images.map((productImg) => {
+            <SwiperSlide >
+              <img src={productSelected.images[0].url} alt="" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={productSelected.images[1].url} alt="" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src={productSelected.images[2].url} alt="" />
+                  </SwiperSlide>
+           </Swiper>
+           
+            {/* {productSelected.images.map((productImg) => {
             return (
               <SwiperSlide key={productImg.id}>
                  <img src={productImg.url} alt="" />
@@ -47,22 +53,7 @@ function Teste() {
                 )
 
           })} */} 
-                   <SwiperSlide >
-                    <img src={productSelected.images[0].url} alt="" />
-                   </SwiperSlide>
-
-                  <SwiperSlide>
-                   <img src={productSelected.images[1].url} alt="" />
-                  </SwiperSlide>
-
-                  <SwiperSlide>
-                   <img src={productSelected.images[2].url} alt="" />
-                  </SwiperSlide>
-          
-           </Swiper>
            
-           
-            
              <div className='container-information-shoes' >
                <h1>{productSelected.name}</h1>
                <p className='description-item'>{productSelected.description}</p>
@@ -94,17 +85,9 @@ function Teste() {
                  })} className='button-add'>Adicionar ao carrinho</button>
                  </div>
             </div> 
-
-
-
           </ContainerItem>
-      
-   
-
-   
-    
   )
     
 }
 
-export default Teste
+export default BuyProduct
